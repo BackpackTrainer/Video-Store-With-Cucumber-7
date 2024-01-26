@@ -12,6 +12,7 @@ Feature: Calculate Rental Costs
   Successfully calculate the fees for renting a single movie of each type for various number of days
   Successfully calculate the fee for renting multiple movies (at least one of each type)
 
+  @RegressionTesting
   Scenario: Empty Rental
     Given I am an existing customer named "Bob Smith"
     When I rent no movies
@@ -32,7 +33,7 @@ Feature: Calculate Rental Costs
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
       | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
 
-    @MultipleMovieRental
+    @RegressionTesting
   Scenario: Multiple movie rental
     Given I am an existing customer named "Bill"
     When I rent "Spiderman" of "Regular" for 2
