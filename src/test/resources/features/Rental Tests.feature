@@ -5,6 +5,12 @@ Feature: Calculate Rental Costs
   
   Business Rules:
   For Regular movies, the fee is $2.00 for the first two days and $1.50 per day thereafter
+  For a New Release, the charge is $3.00 per day
+  For a Childrens movie, the fee is $1.50 for the first 3 days and then $1.50 per day thereafter
+
+  Acceptance Criteria
+  Successfully calculate the fees for renting a single movie of each type for various number of days
+  Successfully calculate the fee for renting multiple movies (at least one of each type)
 
   Scenario: Empty Rental
     Given I am an existing customer named "Bob Smith"
@@ -25,3 +31,10 @@ Feature: Calculate Rental Costs
       | "Tori"     | "Babe"         | "Childrens"   |    1 |    1.5 |
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
       | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
+
+    @MultipleMovieRental
+  Scenario: Multiple movie rental
+    Given I am an existing customer named "Bill"
+    When I rent "Spiderman" of "Regular" for 2
+    When I rent "Wonder Woman" of "New Release" for 2
+    Then my bill is 8.0

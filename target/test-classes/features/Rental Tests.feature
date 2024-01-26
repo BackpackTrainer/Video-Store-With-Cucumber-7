@@ -32,6 +32,7 @@ Feature: Calculate Rental Costs
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
       | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
 
+    @MultipleMovieRental
   Scenario: Multiple movie rental
     Given I am an existing customer named "Bill"
     When I rent "Spiderman" of "Regular" for 2

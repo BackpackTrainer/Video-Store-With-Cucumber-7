@@ -1,14 +1,18 @@
-
-import org.junit.Assert;
+package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import model.Customer;
+import model.Movie;
+import model.Rental;
+import org.junit.jupiter.api.Assertions;
+
 
 public class VideoStoreStepDefinitions {
-	
 	Customer customer;
 	double rentalAmount;
+
 		
 	
 	@Given("I am an existing customer named {string}")
@@ -31,12 +35,12 @@ public class VideoStoreStepDefinitions {
 	@Then("my bill is {double}")
 	public void my_bill_is(double amount) throws Throwable {
 
-		Assert.assertEquals(amount, customer.getTotalCharges(), .01); 
+		Assertions.assertEquals(amount, customer.getTotalCharges(), .01);
 	}
 
 	@Then("^I earn Frequent Renter (\\d+)$")
 	public void i_earn_Frequent_Renter_Points(int points) throws Throwable {
 
-		Assert.assertEquals(points, customer.getFrequentRenterPoints()); 
+		Assertions.assertEquals(points, customer.getFrequentRenterPoints());
 	}
 }

@@ -1,4 +1,4 @@
-
+package model;
 
 public class Rental {
 	private Movie movie;
@@ -27,12 +27,12 @@ public class Rental {
 			if(getDaysRented() > 2) {
 				charge +=(getDaysRented() - 2) * 1.5;
 			}
-			//System.out.println("Regular Movie");
+			//System.out.println("Regular model.Movie");
 			break;
 			
 		case 3:
 			charge += (getDaysRented() * 3);
-			//System.out.println("New Release Movie");
+			//System.out.println("New Release model.Movie");
 			break;
 			
 		case 1:
@@ -40,7 +40,7 @@ public class Rental {
 			if(getDaysRented() > 3) {
 				charge += (getDaysRented() - 3) * 1.5;
 			}
-			//System.out.println("Childrens Movie");
+			//System.out.println("Childrens model.Movie");
 			break;
 		}
 		return charge;

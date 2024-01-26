@@ -11,102 +11,143 @@
     <properties>
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
   
   <build>
-  <plugins>
-
-  <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <systemPropertyVariables>
-                        <buildDirectory>${project.build.directory}</buildDirectory>
-                    </systemPropertyVariables>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>
-                        --add-opens java.base/java.lang=ALL-UNNAMED
-                        --add-opens java.base/java.util=ALL-UNNAMED
-                        --add-opens java.base/java.lang.reflect=ALL-UNNAMED
-                        --add-opens java.base/java.text=ALL-UNNAMED
-                        --add-opens java.desktop/java.awt.font=ALL-UNNAMED
-                    </argLine>
-                </configuration>
-            </plugin>
-  </plugins>
+<!--  <plugins>-->
+<!--  <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <systemPropertyVariables>-->
+<!--                        <buildDirectory>${project.build.directory}</buildDirectory>-->
+<!--                    </systemPropertyVariables>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <argLine>-->
+<!--                        &#45;&#45;add-opens java.base/java.lang=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.util=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.lang.reflect=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.text=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.desktop/java.awt.font=ALL-UNNAMED-->
+<!--                    </argLine>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--  </plugins>-->
   </build>
 
+<!--<dependencies>-->
+<!--      &lt;!&ndash; https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api &ndash;&gt;-->
+<!--      <dependency>-->
+<!--          <groupId>org.junit.jupiter</groupId>-->
+<!--          <artifactId>junit-jupiter-api</artifactId>-->
+<!--          <version>5.10.1</version>-->
+<!--          <scope>test</scope>-->
+<!--      </dependency>-->
 
+<!--      &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-java &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>cucumber-java</artifactId>-->
+<!--        <version>7.9.0</version>-->
+<!--    </dependency>-->
+<!--   -->
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>cucumber-core</artifactId>-->
+<!--        <version>7.9.0</version>-->
+<!--    </dependency>-->
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.9.0</version>
-</dependency>
-   
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>7.9.0</version>
-</dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/gherkin &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>gherkin</artifactId>-->
+<!--        <version>25.0.2</version>-->
+<!--    </dependency>-->
 
-<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>gherkin</artifactId>
-    <version>25.0.2</version>
-</dependency>
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>cucumber-jvm-deps</artifactId>-->
+<!--        <version>1.0.6</version>-->
+<!--        <scope>provided</scope>-->
+<!--    </dependency>-->
 
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-jvm-deps</artifactId>
-    <version>1.0.6</version>
-    <scope>provided</scope>
-</dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>cucumber-junit-platform-engine</artifactId>-->
+<!--        <version>7.15.0</version>-->
+<!--        <scope>test</scope>-->
+<!--    </dependency>-->
 
- <!--
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>1.2.5</version>
-</dependency>
+<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.seleniumhq.selenium</groupId>-->
+<!--        <artifactId>selenium-java</artifactId>-->
+<!--        <version>3.8.1</version>-->
+<!--    </dependency>-->
 
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>gherkin</artifactId>
-    <version>2.12.2</version>
-    <scope>provided</scope>
-</dependency>
--->
+<!--    <dependency>-->
+<!--        <groupId>org.mockito</groupId>-->
+<!--        <artifactId>mockito-all</artifactId>-->
+<!--        <version>1.10.19</version>-->
+<!--        <scope>test</scope>-->
+<!--    </dependency>-->
 
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>1.2.5</version>
-</dependency>
+<!--    <dependency>-->
+<!--        <groupId>io.cucumber</groupId>-->
+<!--        <artifactId>cucumber-junit</artifactId>-->
+<!--        <version>7.9.0</version>-->
+<!--        <scope>test</scope>-->
+<!--    </dependency>-->
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.8.1</version>
-</dependency>
+<!--</dependencies>-->
 
-<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-all</artifactId>
-    <version>1.10.19</version>
-    <scope>test</scope>
-</dependency>
+    <dependencies>
+        <!-- JUnit 5 dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
 
-  </dependencies> 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Cucumber dependencies -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.9.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>7.15.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Selenium (Update to latest version if possible) -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <!-- Mockito (Update to latest version if possible) -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.10.19</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 </project>

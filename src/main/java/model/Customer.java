@@ -1,4 +1,4 @@
-
+package model;
 
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class Customer {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
 		
-		String result = "Rental Record for " + getName() + "\n";
+		String result = "model.Rental Record for " + getName() + "\n";
 		for (Rental each : rentals) {
 			double thisAmount = each.getChargesFor();	
 			
