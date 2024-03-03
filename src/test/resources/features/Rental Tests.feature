@@ -32,6 +32,7 @@ Feature: Calculate Rental Costs
       | "Tori"     | "Babe"         | "Childrens"   |    1 |    1.5 |
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
       | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
+      | "Thomas"   | "Lion King"    | "Regular"     |   20 |     29 |
 
     @RegressionTesting
   Scenario: Multiple movie rental
