@@ -32,9 +32,10 @@ Feature: Calculate Rental Costs
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
       | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
 
-    @MultipleMovieRental
+  @MultipleMovieRental
   Scenario: Multiple movie rental
     Given I am an existing customer named "Bill"
     When I rent "Spiderman" of "Regular" for 2
     When I rent "Wonder Woman" of "New Release" for 2
-    Then my bill is 8.0
+    When I rent "Finding Nemo" of "Childrens" for 2
+    Then my bill is 9.5

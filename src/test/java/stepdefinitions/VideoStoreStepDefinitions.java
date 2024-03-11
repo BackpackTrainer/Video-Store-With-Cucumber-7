@@ -13,7 +13,6 @@ public class VideoStoreStepDefinitions {
 	Customer customer;
 	double rentalAmount;
 
-		
 	
 	@Given("I am an existing customer named {string}")
 	public void i_am_an_existing_customer_named(String name) throws Throwable {
@@ -31,7 +30,6 @@ public class VideoStoreStepDefinitions {
 	    customer.addRental(rental);
 	}
 
-  
 	@Then("my bill is {double}")
 	public void my_bill_is(double amount) throws Throwable {
 
